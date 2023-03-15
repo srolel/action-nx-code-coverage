@@ -1,6 +1,7 @@
 import {details, fragment, summary, table, tbody, th, tr} from './html'
 import {BuildCommentInputs} from './interfaces'
 import {tabulate} from './tabulate'
+import {log} from './logger'
 
 const renderEmoji = (diff: number): string => {
   if (diff < 0) return '❌'
@@ -23,8 +24,8 @@ export const buildComment = ({results}: BuildCommentInputs): string => {
       }
 
 
-      console.log('test', result)
-      console.log('test2', result.diff)
+      log('test', result)
+      log('test2', result.diff)
 
       diffHtml = th(
         renderEmoji(result.diff),
