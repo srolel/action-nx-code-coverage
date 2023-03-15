@@ -24,8 +24,8 @@ export const buildComment = ({results}: BuildCommentInputs): string => {
       }
 
 
-      log('test', result)
-      log('test2', result.diff)
+      log('info', 'test', result)
+      log('info', 'test2', result.diff)
 
       diffHtml = th(
         renderEmoji(result.diff),
