@@ -22,6 +22,10 @@ export const buildComment = ({results}: BuildCommentInputs): string => {
         arrow = '▴'
       }
 
+
+      console.log('test', result)
+      console.log('test2', result.diff)
+
       diffHtml = th(
         renderEmoji(result.diff),
         ' ',
