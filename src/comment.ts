@@ -23,7 +23,6 @@ export const buildComment = ({results}: BuildCommentInputs): string => {
         arrow = '▴'
       }
 
-
       log('info', 'test', result)
       log('info', 'test2', result.diff)
 

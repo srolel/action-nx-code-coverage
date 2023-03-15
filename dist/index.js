@@ -126,6 +126,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.buildComment = void 0;
 const html_1 = __nccwpck_require__(8444);
 const tabulate_1 = __nccwpck_require__(5206);
+const logger_1 = __nccwpck_require__(5228);
 const renderEmoji = (diff) => {
     if (diff < 0)
         return '❌';
@@ -144,6 +145,8 @@ const buildComment = ({ results }) => {
                 plus = '+';
                 arrow = '▴';
             }
+            logger_1.log('info', 'test', result)
+            logger_1.log('info', 'test2', result.diff)
             diffHtml = (0, html_1.th)(renderEmoji(result.diff), ' ', arrow, ' ', plus, result.diff.toFixed(2), '%');
         }
         const htmlResults = (0, tabulate_1.tabulate)(result.details);
